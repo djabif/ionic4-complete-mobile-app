@@ -1,3 +1,4 @@
+
 // Ionic Variables and Theming. For more info, please see:
 // http://ionicframework.com/docs/theming/
 
@@ -74,4 +75,16 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+  $black: rgba(#000000, .8);
+  $black-a: lighten($black, 10%);
+  $black-b: lighten($black, 20%);
+  $black-c: lighten($black, 40%);
+  $black-d: lighten($black, 60%);
+
+  $theme-color-1: $black-a;
+  $theme-color-2: #00e9d5;
+  $theme-color-3: $black-b;
+  $theme-color-4: #ae75e7;
+
 }

@@ -1,0 +1,52 @@
+.search-query
+{
+	font-size: 1.4rem;
+	margin: 12px;
+	margin-bottom: 30px;
+	color: lighten(rgba(#000000, .8), 20%);
+	text-align: center;
+
+	.query-tag
+	{
+		border: 1px solid #00e9d5;
+		color: #00e9d5;
+		background: #FFF;
+	}
+
+	.query-explanation
+	{
+		font-weight: 300;
+	}
+}
+
+.category-concept-card
+{
+	background-color: lighten(rgba(#000000, .8), 20%);
+	border-radius: 15px;
+	box-shadow: none;
+	margin-bottom: 20px;
+
+	.category-title
+	{
+		color: #FFF;
+		font-weight: 600;
+		font-size: 2.2rem;
+		margin: 0px;
+	}
+
+	.category-description
+	{
+		color: #FFF;
+		margin-bottom: 20px;
+	}
+
+	.category-tag
+	{
+		border: 1px solid #FFF;
+		color: #FFF;
+		background: transparent;
+		font-weight: 300;
+		margin-right: 4px;
+		opacity: 0.6;
+	}
+}
