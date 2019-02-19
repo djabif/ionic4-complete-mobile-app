@@ -14,4 +14,18 @@ export class LearnService {
     return this.http.get(".././assets/categories/categories.json")
   }
 
+  getCategoryBySlug(slug){
+    return new Promise<any>((resolve, reject) => {
+      this.getFeedCategories()
+      .subscribe( res =>{
+        Object.keys(res['categories']).forEach(function(key){
+          if(res['categories'][key].slug == slug){
+              resolve(res['categories'][key])
+          }
+        });
+        reject()
+      })
+    })
+  }
+
 }

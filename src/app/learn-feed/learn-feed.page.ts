@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 })
 export class LearnFeedPage implements OnInit {
 
+  _query : string = 'all';
   categories : Array<CategoryModel> = new Array<CategoryModel>();
 
   constructor(
@@ -21,12 +22,15 @@ export class LearnFeedPage implements OnInit {
   ngOnInit() {
     this.learnService.getFeedCategories()
     .subscribe(data => {
-      this.categories = data.categories
+      this.categories = data['categories']
     });
   }
 
-  openDetails(params) {
-    this.router.navigate(["/learn-details"]);
+  openDetails(slug) {
+    debugger
+    this.router.navigate(["/learn-details", {
+      categorySlug: slug
+    }]);
   }
 
 }

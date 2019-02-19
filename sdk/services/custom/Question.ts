@@ -1,6 +1,6 @@
 /* tslint:disable */
 import { Injectable, Inject, Optional } from '@angular/core';
-import { HttpClient, HttpResponse } from '@angular/common/http';
+import { Http, Response } from '@angular/http';
 import { SDKModels } from './SDKModels';
 import { BaseLoopBackApi } from '../core/base.service';
 import { LoopBackConfig } from '../../lb.config';
@@ -21,7 +21,7 @@ import { Answer } from '../../models/Answer';
 export class QuestionApi extends BaseLoopBackApi {
 
   constructor(
-    @Inject(HttpClient) protected http: HttpClient,
+    @Inject(Http) protected http: Http,
     @Inject(SDKModels) protected models: SDKModels,
     @Inject(LoopBackAuth) protected auth: LoopBackAuth,
     @Inject(JSONSearchParams) protected searchParams: JSONSearchParams,
@@ -128,7 +128,7 @@ export class QuestionApi extends BaseLoopBackApi {
    *
    * @param {any} id question id
    *
-   * @param {object} filter
+   * @param {object} filter 
    *
    * @returns {object[]} An empty reference that will be
    *   populated with the actual data once the response is returned
@@ -223,7 +223,7 @@ export class QuestionApi extends BaseLoopBackApi {
    *
    * Data properties:
    *
-   *  - `count` – `{number}` -
+   *  - `count` – `{number}` - 
    */
   public countAnswers(id: any, where: any = {}): Observable<any> {
     let _method: string = "GET";

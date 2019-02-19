@@ -1,6 +1,6 @@
 /* tslint:disable */
 import { Injectable, Inject, Optional } from '@angular/core';
-import { HttpClient, HttpResponse } from '@angular/common/http';
+import { Http, Response } from '@angular/http';
 import { SDKModels } from './SDKModels';
 import { BaseLoopBackApi } from '../core/base.service';
 import { LoopBackConfig } from '../../lb.config';
@@ -20,7 +20,7 @@ import { User } from '../../models/User';
 export class UserApi extends BaseLoopBackApi {
 
   constructor(
-    @Inject(HttpClient) protected http: HttpClient,
+    @Inject(Http) protected http: Http,
     @Inject(SDKModels) protected models: SDKModels,
     @Inject(LoopBackAuth) protected auth: LoopBackAuth,
     @Inject(JSONSearchParams) protected searchParams: JSONSearchParams,
