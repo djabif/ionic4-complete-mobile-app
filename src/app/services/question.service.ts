@@ -57,6 +57,7 @@ export class QuestionService {
   }
 
   createQuestion(values){
+    debugger
     let data = new Question();
     data.question = values.question;
     data.questionSlug = values.questionSlug

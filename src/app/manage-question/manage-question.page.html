@@ -1,9 +1,29 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="dismiss()">
+        <span ion-text showWhen="ios">Cancel</span>
+        <ion-icon name="md-close" showWhen="android, windows"></ion-icon>
+      </ion-button>
+    </ion-buttons>
     <ion-title>ManageQuestion</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-
+<ion-content class="modal-content">
+  <form [formGroup]="questionForm" class="modal-form" (ngSubmit)="onSubmit(questionForm.value)" >
+    <ion-row>
+      <ion-col offset="1" size="10">
+        <ion-item class="textarea-item">
+          <ion-label position="floating">Write your question here</ion-label>
+          <ion-textarea formControlName="question" rows="5"></ion-textarea>
+        </ion-item>
+      </ion-col>
+      <ion-col offset="1" size="10">
+        <ion-button expand="block" type="submit" [disabled]="!questionForm.valid">
+          <b>Ask</b>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
 </ion-content>

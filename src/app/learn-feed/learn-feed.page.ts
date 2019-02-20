@@ -27,7 +27,6 @@ export class LearnFeedPage implements OnInit {
   }
 
   openDetails(slug) {
-    debugger
     this.router.navigate(["/learn-details", {
       categorySlug: slug
     }]);
