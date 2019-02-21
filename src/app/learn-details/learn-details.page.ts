@@ -49,11 +49,12 @@ export class LearnDetailsPage implements OnInit {
           .subscribe(data => {
             this.category = data[0];
             this.questions = data[1];
+            loading.dismiss();
           })
         } else{
           this.category = null;
+          loading.dismiss();
         }
-        loading.dismiss();
       }
     )
   }
@@ -65,7 +66,6 @@ export class LearnDetailsPage implements OnInit {
     });
 
     create_question_modal.onDidDismiss().then(res => {
-      debugger
       this.getQuestions();
     });
 

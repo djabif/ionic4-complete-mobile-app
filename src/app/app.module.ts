@@ -13,10 +13,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { SDKBrowserModule } from '../../sdk/index';
 
 import { ManageQuestionPage } from './manage-question/manage-question.page';
+import { ManageAnswerPage } from './manage-answer/manage-answer.page';
 
 @NgModule({
-  declarations: [AppComponent, ManageQuestionPage],
-  entryComponents: [ManageQuestionPage],
+  declarations: [AppComponent, ManageQuestionPage, ManageAnswerPage],
+  entryComponents: [ManageQuestionPage, ManageAnswerPage],
   imports: [
     BrowserModule,
     HttpClientModule,
