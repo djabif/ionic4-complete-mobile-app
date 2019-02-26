@@ -8,12 +8,6 @@
 </ion-header>
 
 <ion-content padding>
-  <h3 class="search-query">
-    <span>Showing: </span>
-    <ion-badge class="query-tag">{{ _query }}</ion-badge>
-    <span class="query-explanation"> concepts</span>
-  </h3>
-
   <ion-card class="category-concept-card" [style.background-color]="category.background" *ngFor="let category of categories" (click)="openDetails(category.slug)">
     <ion-card-header>
       <ion-card-title class="category-title">{{ category.title }}</ion-card-title>

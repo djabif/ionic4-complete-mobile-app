@@ -49,21 +49,21 @@
               <ion-col size="12">
                 <h2 class="question-text" (click)="openAnswers(question)">{{ question.question }}</h2>
               </ion-col>
-              <ion-col size="4" class="votes-details">
+              <ion-col size="5" class="votes-details">
                 <div class="details-wrapper">
                   <span class="total-votes">{{ question.positiveVotes + question.negativeVotes }}</span>
                   <span class="details-text">Votes</span>
                 </div>
               </ion-col>
-              <ion-col size="4" class="answers-details" (click)="openAnswers(question)">
+              <ion-col size="5" class="answers-details" (click)="openAnswers(question)">
                 <div class="details-wrapper">
                   <span class="total-answers">{{ question.answers.length }}</span>
                   <span class="details-text">{{ (question.answers.length > 1 || question.answers.length == 0) ? 'Answers' : 'Answer' }}</span>
                 </div>
               </ion-col>
-              <ion-col size="4" class="actions-details">
+              <ion-col size="2" class="actions-details">
                 <ion-button class="delete-button" size="small" shape="round" fill="clear" color="danger" (click)="delete(question.id)">
-                  <ion-icon slot="icon-only" name="ios-trash-outline"></ion-icon>
+                  <ion-icon slot="icon-only" name="trash"></ion-icon>
                 </ion-button>
               </ion-col>
             </ion-row>

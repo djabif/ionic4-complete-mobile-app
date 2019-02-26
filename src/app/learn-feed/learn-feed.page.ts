@@ -10,7 +10,6 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class LearnFeedPage implements OnInit {
 
-  _query : string = '';
   categories : Array<CategoryModel> = new Array<CategoryModel>();
 
   constructor(
@@ -21,16 +20,6 @@ export class LearnFeedPage implements OnInit {
   }
 
   ngOnInit() {
-    this.route.queryParams.subscribe(params =>{
-      debugger
-      if(params['query']){
-        this._query = params['query'];
-      }
-      else{
-        this._query = 'all';
-      }
-
-    });
     this.learnService.getFeedCategories()
     .subscribe(data => {
       this.categories = data['categories']
