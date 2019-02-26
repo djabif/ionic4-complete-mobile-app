@@ -23,7 +23,13 @@ export class LearnFeedPage implements OnInit {
   ngOnInit() {
     this.route.queryParams.subscribe(params =>{
       debugger
+      if(params['query']){
         this._query = params['query'];
+      }
+      else{
+        this._query = 'all';
+      }
+
     });
     this.learnService.getFeedCategories()
     .subscribe(data => {
