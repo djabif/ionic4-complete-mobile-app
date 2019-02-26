@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-// import { isPresent } from 'ionic-angular/util/util';
 import { LearnService } from '../services/learn.service';
 import { CategoryModel } from '../services/learn.model';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-learn-feed',
@@ -11,15 +10,21 @@ import { Router } from '@angular/router';
 })
 export class LearnFeedPage implements OnInit {
 
-  _query : string = 'all';
+  _query : string = '';
   categories : Array<CategoryModel> = new Array<CategoryModel>();
 
   constructor(
     public learnService: LearnService,
+    private route: ActivatedRoute,
     private router: Router
-  ) { }
+  ) {
+  }
 
   ngOnInit() {
+    this.route.queryParams.subscribe(params =>{
+      debugger
+        this._query = params['query'];
+    });
     this.learnService.getFeedCategories()
     .subscribe(data => {
       this.categories = data['categories']

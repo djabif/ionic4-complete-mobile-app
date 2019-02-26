@@ -11,14 +11,22 @@ export class AppComponent {
 
   public appPages = [
   {
-    title: 'Learn Feed',
+    title: 'All',
     url: '/learn-feed',
-    icon: 'home'
+    icon: 'home',
+    query: 'all'
   },
   {
-    title: 'Learn Details',
-    url: '/learn-details',
-    icon: 'list'
+    title: 'Basic',
+    url: '/learn-feed',
+    icon: 'home',
+    query: 'basic'
+  },
+  {
+    title: 'Core',
+    url: '/learn-feed',
+    icon: 'list',
+    query: 'core'
   }
 ];
 
