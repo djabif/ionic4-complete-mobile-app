@@ -87,13 +87,13 @@
 			&.up-vote
 			{
 				color: #26bf7e;
-				opacity: 0.25;
+				opacity: 0.45;
 			}
 
 			&.down-vote
 			{
 				color: #ed4f50;
-				opacity: 0.25;
+				opacity: 0.45;
 			}
 
 			&.activated
@@ -151,7 +151,7 @@
 			.delete-button
 			{
 				margin: 0px;
-				font-size: 1.2rem;
+				font-size: 1.0em;
 			}
 		}
 

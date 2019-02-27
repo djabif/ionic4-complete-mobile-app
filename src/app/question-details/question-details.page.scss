@@ -54,7 +54,7 @@
       .question-action-button
       {
         margin: 0px;
-        padding: 0px 6px;
+        padding: 0px 2px;
 
         &.up-vote
         {
@@ -173,7 +173,7 @@
 
 		.vote-button
 		{
-			font-size: 2.2rem;
+			// font-size: 2.2rem;
 		  margin: 0px;
 		  padding: 0px;
 		  width: 100%;
@@ -186,13 +186,13 @@
 			&.up-vote
 			{
 				color: #26bf7e;
-				opacity: 0.25;
+				opacity: 0.45;
 			}
 
 			&.down-vote
 			{
 				color: #ed4f50;
-				opacity: 0.25;
+				opacity: 0.45;
 			}
 
 			&.activated
@@ -249,6 +249,11 @@
 			align-self: flex-end;
 			text-align: right;
 
+      .edit-button
+			{
+				margin: 0px;
+				font-size: 1.6rem;
+			}
 			.delete-button
 			{
 				margin: 0px;
